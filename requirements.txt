@@ -1,14 +1,7 @@
-requirements_content = """
+
 streamlit
 opencv-python
 pandas
 numpy
 matplotlib
 scikit-learn
-"""
-
-file_path = "/mnt/data/requirements.txt"
-with open(file_path, "w") as file:
-    file.write(requirements_content)
-
-file_path
