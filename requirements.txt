@@ -1,6 +1,5 @@
 
-streamlit
-opencv-python==4.6.0
+opencv-python
 pandas
 numpy
 matplotlib
