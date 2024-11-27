@@ -11,8 +11,8 @@ def main():
 
     with col1:
         st.subheader("Upload")
-        # Upload image
-        uploaded_file = st.file_uploader("Upload an image file", type=["jpg", "jpeg", "png"])
+        # Upload video
+        uploaded_file = st.file_uploader("Upload a video file", type=["mp4", "mov", "avi"]
 
         if uploaded_file is not None:
             # Display image
