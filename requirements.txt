@@ -4,3 +4,7 @@ pandas
 numpy
 matplotlib
 scikit-learn
+ultralytics
+clearml
+paddlepaddle
+paddleocr>=2.0.1
