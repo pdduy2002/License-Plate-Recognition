@@ -18,10 +18,10 @@ def get_plate(det_model, ocr_model, image):
         if ocr_res[0] is not None:
             extracted_plate = "".join(comp[-1][0] for comp in ocr_res[0])
             extracted_plate = "".join(filter(lambda x: x.isalpha() or x.isdigit(), extracted_plate))
-            print(extracted_plate)
-            if len(extracted_plate) >= 6 and len(extracted_plate) <= 10:
-                res.append(extracted_plate)
+            if 6 <= len(extracted_plate) <= 10 and extracted_plate.isupper() and extracted_plate not in res:
+                res.append(extracted_plate) 
         
+    print("===================", res)
         # cv2.imshow("test", img)
         # cv2.waitKey(0)
 

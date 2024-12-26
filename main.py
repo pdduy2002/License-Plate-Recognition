@@ -24,6 +24,9 @@ def main():
 
     if "prev_file_name" not in st.session_state:
         st.session_state.prev_file_name = ""
+    
+    if "number_of_uploaded" not in st.session_state:
+        st.session_state.number_of_uploaded = 0
 
     st.title("License Plate Recognition")
 
@@ -65,8 +68,9 @@ def main():
         st.subheader("Danh sách biển số xe đọc ra được")
         if st.session_state.plates != []:
             # Display recognized license plate text
-            st.session_state.plates.sort()
-            for p in set(st.session_state.plates):
+            # st.session_state.plates = set(st.session_state.plates)
+            # st.session_state.plates = sorted(st.session_state.plates)
+            for p in st.session_state.plates:
                 st.write(p)
         else:
             st.write("Vui lòng tải lên ảnh để nhận diện biển số.")
